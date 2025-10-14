@@ -103,8 +103,8 @@ curl -X POST "http://localhost:8000/extract" \
 # With custom models
 curl -X POST "http://localhost:8000/extract" \
   -F "file=@/path/to/license.jpg" \
-  -F "classification_model=accounts/fireworks/models/qwen2p5-vl-32b-instruct" \
-  -F "extraction_model=accounts/fireworks/models/llama-v3p2-90b-vision-instruct"
+  -F "classification_model="accounts/fireworks/models/llama4-scout-instruct-basic" \
+  -F "extraction_model="accounts/fireworks/models/qwen2p5-vl-32b-instruct"
 ```
 
 ### Python
@@ -128,8 +128,8 @@ with open("license.jpg", "rb") as f:
         "http://localhost:8000/extract",
         files={"file": f},
         data={
-            "classification_model": "accounts/fireworks/models/qwen2p5-vl-32b-instruct",
-            "extraction_model": "accounts/fireworks/models/llama-v3p2-90b-vision-instruct",
+            "classification_model": "accounts/fireworks/models/llama4-scout-instruct-basic" ,
+            "extraction_model": "accounts/fireworks/models/qwen2p5-vl-32b-instruct",
             "run_validations": True
         }
     )
@@ -206,11 +206,13 @@ result = extract_document("passport.jpg")
 
 ## Available Models
 
-| Speed | Model ID | Description |
-|-------|----------|-------------|
-| ⚡ Fast | `accounts/fireworks/models/qwen2p5-vl-32b-instruct` | Quick processing, good accuracy |
-| 🎯 Balanced | `accounts/fireworks/models/qwen2p5-vl-32b-instruct` | Best balance (default) |
-| 🔬 Accurate | `accounts/fireworks/models/llama-v3p2-90b-vision-instruct` | Slower but highest accuracy |
+
+| Speed | Model | Description |
+|-------|-------|-------------|
+| ⚡ Fast | Llama 4 17B Vision Scout | Quick processing, good accuracy |
+| 🎯 Balanced | Llama 4 17B Vision Maverick | Best balance (default) |
+| 🔬 Accurate | Qwen 2.5 VL 32B | Slower but highest accuracy |
+
 
 ## Environment Variables
 
@@ -266,32 +268,6 @@ RUN pip install -r requirements.txt
 COPY . .
 CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000"]
 ```
-
-### Cloud Deployment
-The API can be deployed to:
-- AWS Lambda (with Mangum adapter)
-- Google Cloud Run
-- Azure App Service
-- Heroku
-- DigitalOcean App Platform
-
-## Security Notes
-
-- In production, set specific CORS origins instead of `*`
-- Use HTTPS in production
-- Consider rate limiting
-- Store API keys securely (environment variables, secrets manager)
-- Validate file sizes and types
-
-## Performance
-
-- Async/await for non-blocking I/O
-- Temporary file cleanup
-- Supports concurrent requests
-- Token usage tracking
-- Cost calculation per request
-
-## Support
 
 For issues or questions:
 - Check the interactive docs at `/docs`
