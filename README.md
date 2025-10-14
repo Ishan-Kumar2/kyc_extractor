@@ -6,6 +6,8 @@ AI-powered identity document processing system with web UI and REST API.
 
 Extract structured information from identity documents (passports, driver's licenses, state IDs, etc.) using vision-language models from Fireworks AI.
 
+
+
 ### Key Features
 
 - ✅ **Multiple Document Types**: Passports, driver's licenses, state IDs, college IDs
@@ -127,9 +129,9 @@ The Streamlit UI uses continuous color gradients for visual confidence feedback.
 
 | Speed | Model | Description |
 |-------|-------|-------------|
-| ⚡ Fast | Qwen 2.5 VL 32B | Quick processing, good accuracy |
-| 🎯 Balanced | Qwen 2.5 VL 32B | Best balance (default) |
-| 🔬 Accurate | Llama 3.2 90B Vision | Slower but highest accuracy |
+| ⚡ Fast | Llama 4 17B Vision Scout | Quick processing, good accuracy |
+| 🎯 Balanced | Llama 4 17B Vision Maverick | Best balance (default) |
+| 🔬 Accurate | Qwen 2.5 VL 32B | Slower but highest accuracy |
 
 ## API Usage
 
@@ -380,5 +382,3 @@ Built with:
 - [OpenAI Python SDK](https://github.com/openai/openai-python) - API client
 
 ---
-
-**Made with ❤️ for secure, accurate KYC document processing**
