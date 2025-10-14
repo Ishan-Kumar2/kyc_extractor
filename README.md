@@ -6,7 +6,10 @@ AI-powered identity document processing system with web UI and REST API.
 
 Extract structured information from identity documents (passports, driver's licenses, state IDs, etc.) using vision-language models from Fireworks AI.
 
-
+### Video Demo
+<a href="https://drive.google.com/file/d/1LMYmRBj7jl4rJZaM__vHceJuj3SVIbo-/view?usp=sharing">
+  <img src="https://github.com/user-attachments/assets/0a9bfcda-5bb1-4fba-86cc-14701a244ffe" alt="Video Demo" width="500"/>
+</a>
 
 ### Key Features
 
