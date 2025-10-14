@@ -1,6 +1,6 @@
 # KYC Document Extractor - Streamlit UI
 
-A clean, professional web interface for AI-powered identity document processing.
+A clean web interface for AI-powered identity document processing.
 
 ## Features
 
@@ -11,9 +11,9 @@ A clean, professional web interface for AI-powered identity document processing.
 - Confidence-based color coding (Red → Yellow → Green)
 
 ### 🔧 Model Selection
-- **⚡ Fast (Qwen 32B)**: Quick processing, good accuracy
-- **🎯 Balanced (Qwen 32B)**: Best balance (Default)
-- **🔬 Accurate (Llama 90B)**: Slower but highest accuracy
+- **⚡ Fast (Llama 4 Scout)**: Quick processing, good accuracy
+- **🎯 Balanced (Llama 4 Maverick)**: Best balance
+- **🔬 Accurate (Qwen 2.5 32B)**: Slower but highest accuracy
 
 ### 📊 Results Display
 - **Essential Fields**: Always visible with confidence colors
